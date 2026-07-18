@@ -69,7 +69,7 @@ spec:
       containers:
       - name: backend
         image: 192.168.2.100:30500/edison-backend:b146158
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         # --- THE FIX TO CIRCUMVENT THE DIRECTORY STRUCTURE ---
         args:
         - "uvicorn"
@@ -119,7 +119,7 @@ spec:
       containers:
       - name: frontend
         image: 192.168.2.100:30500/edison-frontend:b146158
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8501
         env:
