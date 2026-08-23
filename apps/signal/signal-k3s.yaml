@@ -91,7 +91,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 192.168.2.100:30500/signal-backend:a7cbed4
+        image: 192.168.2.100:30500/signal-backend:ad0d7e2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
@@ -147,7 +147,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 192.168.2.100:30500/signal-frontend:a7cbed4
+        image: 192.168.2.100:30500/signal-frontend:ad0d7e2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
