@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: signal-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/space0w1/homelab-infrastructure.git'
+    targetRevision: HEAD
+    path: 'apps/signal'
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: signal
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
