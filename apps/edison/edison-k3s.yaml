@@ -68,7 +68,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 192.168.2.100:30500/edison-backend:4f1a92a
+        image: 192.168.2.100:30500/edison-backend:9661022
         imagePullPolicy: IfNotPresent
         # --- THE FIX TO CIRCUMVENT THE DIRECTORY STRUCTURE ---
         args:
@@ -118,7 +118,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 192.168.2.100:30500/edison-frontend:4f1a92a
+        image: 192.168.2.100:30500/edison-frontend:9661022
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8501
