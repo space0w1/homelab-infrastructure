@@ -91,7 +91,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 192.168.2.100:30500/signal-backend:bea6204
+        image: 192.168.2.100:30500/signal-backend:eb6a881
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
@@ -152,7 +152,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 192.168.2.100:30500/signal-frontend:bea6204
+        image: 192.168.2.100:30500/signal-frontend:eb6a881
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
@@ -199,7 +199,7 @@ spec:
           restartPolicy: Never
           containers:
           - name: nightly
-            image: 192.168.2.100:30500/signal-backend:bea6204
+            image: 192.168.2.100:30500/signal-backend:eb6a881
             imagePullPolicy: IfNotPresent
             command: ["python", "-m", "app.jobs.nightly"]
             env:
